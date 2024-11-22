@@ -5,23 +5,37 @@ from datetime import datetime, date
 
 def convert_to_datetime(date_val: str) -> datetime:
     # `DD.MM.YYYY`
-    return datetime.strptime(date_val, "%d.%m.%Y")
+    try:
+        return datetime.strptime(date_val, "%d.%m.%Y")
+    except:
+        raise ValueError("Unable to convert value to datetime.")
+
 
 
 def get_days_between(first: datetime, last: datetime) -> int:
-    return (last - first).days
+    try:
+        return (last - first).days
+    except:
+        raise TypeError("Datetimes required.")
     
 
 
 def get_day_of_week_on(date_val: datetime) -> str:
-    return convert_to_datetime(date_val).strftime("%A")
+    try:
+        if isinstance(date_val, datetime):
+            
+        return convert_to_datetime(date_val).strftime("%A")
+    except:
+        raise TypeError("Datetime required.")
 
 
 def get_current_age(birthdate: date) -> int:
-    print(date.now())
+    try:
+        current_time = datetime.now().date()
+        same_year = date(current_time.year, birthdate.month, birthdate.day)
+        if same_year >= current_time:
+            return current_time.year - birthdate.year - 1
+        return current_time.year - birthdate.year
+    except:
+        raise TypeError("Date required.")
 
-# a = convert_to_datetime("11.01.2001")
-# b = convert_to_datetime("15.01.2001")
-# print(get_days_between(a, b))
-# print(get_day_of_week_on("21.11.2024"))
-get_current_age(datetime.now())
