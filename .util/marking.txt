@@ -7,7 +7,7 @@ days_api/test_api.py ......FF..............F......FFFFF.........FFFFFFFF [ 45%]
 FFF.FFFF.F.FFFF.F.....                                                   [ 65%]
 days_api/test_date_functions.py .......................................  [100%]
 
-======================== 29 failed, 83 passed in 0.40s =========================
+======================== 29 failed, 83 passed in 0.37s =========================
 ************* Module app
 days_api/app.py:36:0: C0303: Trailing whitespace (trailing-whitespace)
 days_api/app.py:39:0: C0303: Trailing whitespace (trailing-whitespace)
@@ -15,10 +15,10 @@ days_api/app.py:56:0: C0303: Trailing whitespace (trailing-whitespace)
 days_api/app.py:59:0: C0303: Trailing whitespace (trailing-whitespace)
 days_api/app.py:63:0: C0303: Trailing whitespace (trailing-whitespace)
 days_api/app.py:69:0: C0303: Trailing whitespace (trailing-whitespace)
-days_api/app.py:125:0: C0303: Trailing whitespace (trailing-whitespace)
-days_api/app.py:126:31: C0303: Trailing whitespace (trailing-whitespace)
-days_api/app.py:129:0: C0303: Trailing whitespace (trailing-whitespace)
-days_api/app.py:131:0: C0303: Trailing whitespace (trailing-whitespace)
+days_api/app.py:124:0: C0303: Trailing whitespace (trailing-whitespace)
+days_api/app.py:125:31: C0303: Trailing whitespace (trailing-whitespace)
+days_api/app.py:128:0: C0303: Trailing whitespace (trailing-whitespace)
+days_api/app.py:130:0: C0303: Trailing whitespace (trailing-whitespace)
 days_api/app.py:26:0: C0116: Missing function or method docstring (missing-function-docstring)
 days_api/app.py:33:0: C0116: Missing function or method docstring (missing-function-docstring)
 days_api/app.py:46:12: W0612: Unused variable 'valid_date' (unused-variable)
@@ -28,9 +28,9 @@ days_api/app.py:77:8: W0612: Unused variable 'current_age' (unused-variable)
 days_api/app.py:90:0: C0116: Missing function or method docstring (missing-function-docstring)
 days_api/app.py:101:0: C0116: Missing function or method docstring (missing-function-docstring)
 days_api/app.py:112:0: C0116: Missing function or method docstring (missing-function-docstring)
-days_api/app.py:120:19: R1716: Simplify chained comparison between the operands (chained-comparison)
+days_api/app.py:119:19: R1716: Simplify chained comparison between the operands (chained-comparison)
 days_api/app.py:112:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
-days_api/app.py:139:0: C0116: Missing function or method docstring (missing-function-docstring)
+days_api/app.py:138:0: C0116: Missing function or method docstring (missing-function-docstring)
 days_api/app.py:5:0: W0611: Unused date imported from datetime (unused-import)
 days_api/app.py:7:0: W0611: Unused Response imported from flask (unused-import)
 ************* Module date_functions
