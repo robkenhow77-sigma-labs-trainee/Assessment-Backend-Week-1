@@ -3,20 +3,18 @@ platform linux -- Python 3.12.7, pytest-8.3.3, pluggy-1.5.0
 rootdir: /home/runner/work/Assessment-Backend-Week-1/Assessment-Backend-Week-1
 collected 112 items
 
-days_api/test_api.py .FFFFFFFFFF..FFFFFFFF.FFFFFFFFFFFFFFFFFFFFFFFFFFFFF [ 45%]
-FFFFFFFFFF.FFFFFFFFFFF                                                   [ 65%]
+days_api/test_api.py .FFFFFFFFFF.............FFFFFFFFFF.......FFFFFFFFFF [ 45%]
+FFFFFFFFFF.FFFFFF.....                                                   [ 65%]
 days_api/test_date_functions.py .......................................  [100%]
 
-======================== 68 failed, 44 passed in 0.37s =========================
+======================== 46 failed, 66 passed in 0.35s =========================
 ************* Module app
 days_api/app.py:33:0: C0116: Missing function or method docstring (missing-function-docstring)
-days_api/app.py:40:0: C0116: Missing function or method docstring (missing-function-docstring)
-days_api/app.py:45:0: C0116: Missing function or method docstring (missing-function-docstring)
+days_api/app.py:42:0: C0116: Missing function or method docstring (missing-function-docstring)
 days_api/app.py:50:0: C0116: Missing function or method docstring (missing-function-docstring)
+days_api/app.py:55:0: C0116: Missing function or method docstring (missing-function-docstring)
 days_api/app.py:5:0: W0611: Unused date imported from datetime (unused-import)
 days_api/app.py:7:0: W0611: Unused Response imported from flask (unused-import)
-days_api/app.py:9:0: W0611: Unused get_day_of_week_on imported from date_functions (unused-import)
-days_api/app.py:9:0: W0611: Unused get_current_age imported from date_functions (unused-import)
 ************* Module date_functions
 days_api/date_functions.py:20:0: C0303: Trailing whitespace (trailing-whitespace)
 days_api/date_functions.py:41:0: C0305: Trailing newlines (trailing-newlines)
@@ -30,5 +28,5 @@ days_api/date_functions.py:32:0: C0116: Missing function or method docstring (mi
 days_api/date_functions.py:40:8: W0707: Consider explicitly re-raising using 'except Exception as exc' and 'raise TypeError('Date required.') from exc' (raise-missing-from)
 
 -----------------------------------
-Your code has been rated at 6.25/10
+Your code has been rated at 7.19/10
 
