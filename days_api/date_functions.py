@@ -22,9 +22,9 @@ def get_days_between(first: datetime, last: datetime) -> int:
 
 def get_day_of_week_on(date_val: datetime) -> str:
     try:
-        if isinstance(date_val, datetime):
-            
-        return convert_to_datetime(date_val).strftime("%A")
+        day = date_val.weekday()
+        return ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"][day]
+
     except:
         raise TypeError("Datetime required.")
 
@@ -33,7 +33,7 @@ def get_current_age(birthdate: date) -> int:
     try:
         current_time = datetime.now().date()
         same_year = date(current_time.year, birthdate.month, birthdate.day)
-        if same_year >= current_time:
+        if same_year > current_time:
             return current_time.year - birthdate.year - 1
         return current_time.year - birthdate.year
     except:
