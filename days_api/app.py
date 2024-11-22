@@ -29,5 +29,29 @@ def index():
     return jsonify({ "message": "Welcome to the Days API." })
 
 
+@app.route("/between", methods= ["POST"])
+def get_days_between_two_dates():
+    data = request.json
+    first = convert_to_datetime(data.get("first"))
+    last = convert_to_datetime(data.get("last"))
+    return get_days_between(first, last)
+
+@app.route("/weekday", methods= ["POST"])
+def get_day_of_the_week():
+    pass
+
+
+@app.route("/history", methods= ["POST", "DELETE"])
+def get_history():
+    pass
+
+
+@app.route("/current_age", methods= ["GET"])
+def get_birthday():
+    pass
+
+
+
+
 if __name__ == "__main__":
     app.run(port=8080, debug=True)
