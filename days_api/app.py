@@ -34,11 +34,16 @@ def get_days_between_two_dates():
     data = request.json
     first = convert_to_datetime(data.get("first"))
     last = convert_to_datetime(data.get("last"))
-    return get_days_between(first, last)
+    difference = get_days_between(first, last)
+    return {"days": difference }, 200
+
 
 @app.route("/weekday", methods= ["POST"])
 def get_day_of_the_week():
-    pass
+    data = request.json
+    day = convert_to_datetime(data.get("date"))
+    day_of_week = get_day_of_week_on(day)
+    return {"weekday": day_of_week}, 200
 
 
 @app.route("/history", methods= ["POST", "DELETE"])
@@ -48,8 +53,12 @@ def get_history():
 
 @app.route("/current_age", methods= ["GET"])
 def get_birthday():
-    pass
-
+    args = request.args.to_dict()
+    date_str = args.get("date")
+    date_str_list = date_str.split("-")
+    date_str_correct_format = ".".join([date_str_list[2], date_str_list[1], date_str_list[0]])
+    current_age = get_current_age(convert_to_datetime(date_str_correct_format).date())
+    return {"current_age": current_age}, 200
 
 
 
