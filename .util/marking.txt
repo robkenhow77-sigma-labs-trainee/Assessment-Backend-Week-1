@@ -3,20 +3,34 @@ platform linux -- Python 3.12.7, pytest-8.3.3, pluggy-1.5.0
 rootdir: /home/runner/work/Assessment-Backend-Week-1/Assessment-Backend-Week-1
 collected 112 items
 
-days_api/test_api.py .FFFFFFFFF..............FFFFFFFFFF.........FFFFF... [ 45%]
-.F.FFFFF.F.FFFFFF.....                                                   [ 65%]
+days_api/test_api.py ......FF..............F......FFFFF.........FFFFFFFF [ 45%]
+FFF.FFFF.F.FFFF.F.....                                                   [ 65%]
 days_api/test_date_functions.py .......................................  [100%]
 
-======================== 37 failed, 75 passed in 0.33s =========================
+======================== 29 failed, 83 passed in 0.40s =========================
 ************* Module app
-days_api/app.py:82:0: C0303: Trailing whitespace (trailing-whitespace)
+days_api/app.py:36:0: C0303: Trailing whitespace (trailing-whitespace)
+days_api/app.py:39:0: C0303: Trailing whitespace (trailing-whitespace)
+days_api/app.py:56:0: C0303: Trailing whitespace (trailing-whitespace)
+days_api/app.py:59:0: C0303: Trailing whitespace (trailing-whitespace)
+days_api/app.py:63:0: C0303: Trailing whitespace (trailing-whitespace)
+days_api/app.py:69:0: C0303: Trailing whitespace (trailing-whitespace)
+days_api/app.py:125:0: C0303: Trailing whitespace (trailing-whitespace)
+days_api/app.py:126:31: C0303: Trailing whitespace (trailing-whitespace)
+days_api/app.py:129:0: C0303: Trailing whitespace (trailing-whitespace)
+days_api/app.py:131:0: C0303: Trailing whitespace (trailing-whitespace)
 days_api/app.py:26:0: C0116: Missing function or method docstring (missing-function-docstring)
 days_api/app.py:33:0: C0116: Missing function or method docstring (missing-function-docstring)
-days_api/app.py:50:0: C0116: Missing function or method docstring (missing-function-docstring)
-days_api/app.py:60:0: C0116: Missing function or method docstring (missing-function-docstring)
-days_api/app.py:70:0: C0116: Missing function or method docstring (missing-function-docstring)
-days_api/app.py:78:15: R1716: Simplify chained comparison between the operands (chained-comparison)
-days_api/app.py:89:0: C0116: Missing function or method docstring (missing-function-docstring)
+days_api/app.py:46:12: W0612: Unused variable 'valid_date' (unused-variable)
+days_api/app.py:53:0: C0116: Missing function or method docstring (missing-function-docstring)
+days_api/app.py:73:0: C0116: Missing function or method docstring (missing-function-docstring)
+days_api/app.py:77:8: W0612: Unused variable 'current_age' (unused-variable)
+days_api/app.py:90:0: C0116: Missing function or method docstring (missing-function-docstring)
+days_api/app.py:101:0: C0116: Missing function or method docstring (missing-function-docstring)
+days_api/app.py:112:0: C0116: Missing function or method docstring (missing-function-docstring)
+days_api/app.py:120:19: R1716: Simplify chained comparison between the operands (chained-comparison)
+days_api/app.py:112:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+days_api/app.py:139:0: C0116: Missing function or method docstring (missing-function-docstring)
 days_api/app.py:5:0: W0611: Unused date imported from datetime (unused-import)
 days_api/app.py:7:0: W0611: Unused Response imported from flask (unused-import)
 ************* Module date_functions
@@ -32,5 +46,5 @@ days_api/date_functions.py:32:0: C0116: Missing function or method docstring (mi
 days_api/date_functions.py:40:8: W0707: Consider explicitly re-raising using 'except Exception as exc' and 'raise TypeError('Date required.') from exc' (raise-missing-from)
 
 -----------------------------------
-Your code has been rated at 7.67/10
+Your code has been rated at 7.26/10
 
