@@ -111,7 +111,6 @@ def get_day_of_the_week():
 @app.route("/history", methods= ["GET", "DELETE"])
 def get_history():
     args = request.args.to_dict()
-
     if request.method == "POST":
         number = args.get("number")
         if number:
@@ -146,6 +145,7 @@ def get_birthday():
         add_to_history(request)
         return {"current_age": current_age}, 200
     return {"error": "Value for data parameter is invalid."}, 400
+
 
 if __name__ == "__main__":
     app.run(port=8080, debug=True)
