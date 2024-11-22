@@ -5,7 +5,10 @@ collected 0 items / 1 error
 
 !!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
 =============================== 1 error in 0.21s ===============================
+************* Module date_functions
+days_api/date_functions.py:27:9: E0001: Parsing failed: 'expected an indented block after 'if' statement on line 25 (date_functions, line 27)' (syntax-error)
 ************* Module app
+days_api/app.py:9:0: E0001: Cannot import 'date_functions' due to 'expected an indented block after 'if' statement on line 25 (date_functions, line 27)' (syntax-error)
 days_api/app.py:5:0: W0611: Unused date imported from datetime (unused-import)
 days_api/app.py:7:0: W0611: Unused Response imported from flask (unused-import)
 days_api/app.py:7:0: W0611: Unused request imported from flask (unused-import)
@@ -13,15 +16,7 @@ days_api/app.py:9:0: W0611: Unused convert_to_datetime imported from date_functi
 days_api/app.py:9:0: W0611: Unused get_day_of_week_on imported from date_functions (unused-import)
 days_api/app.py:9:0: W0611: Unused get_days_between imported from date_functions (unused-import)
 days_api/app.py:9:0: W0611: Unused get_current_age imported from date_functions (unused-import)
-************* Module date_functions
-days_api/date_functions.py:13:0: C0303: Trailing whitespace (trailing-whitespace)
-days_api/date_functions.py:6:0: C0116: Missing function or method docstring (missing-function-docstring)
-days_api/date_functions.py:11:0: C0116: Missing function or method docstring (missing-function-docstring)
-days_api/date_functions.py:16:0: C0116: Missing function or method docstring (missing-function-docstring)
-days_api/date_functions.py:20:0: C0116: Missing function or method docstring (missing-function-docstring)
-days_api/date_functions.py:21:10: E1101: Class 'date' has no 'now' member (no-member)
-days_api/date_functions.py:20:20: W0613: Unused argument 'birthdate' (unused-argument)
 
 -----------------------------------
-Your code has been rated at 1.43/10
+Your code has been rated at 0.00/10
 
