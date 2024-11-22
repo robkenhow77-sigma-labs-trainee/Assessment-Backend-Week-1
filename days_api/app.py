@@ -24,6 +24,7 @@ def add_to_history(current_request):
 
 
 def get_difference(data: dict) -> int:
+    """Gets the difference in days as an integer."""
     first = convert_to_datetime(data.get("first"))
     last = convert_to_datetime(data.get("last"))
     difference = get_days_between(first, last)
@@ -31,50 +32,45 @@ def get_difference(data: dict) -> int:
 
 
 def validate_between_post(data: dict) -> bool:
+    """Validates post requests to the between route."""
     if not isinstance(data, dict):
         return False, {"error": "Missing required data."}
-    
     if len(data) != 2:
         return False, {"error": "Missing required data."}
-    
     for key in data.keys():
         if key not in ["first", "last"]:
             return False, {"error": "Missing required data."}
-
     for key in data.keys():
         try:
-            valid_date = datetime.strptime(data.get(key), "%d.%m.%Y")
+            datetime.strptime(data.get(key), "%d.%m.%Y")
         except ValueError:
             return False, {"error": "Unable to convert value to datetime."}
-
     return True, None
 
 
 def validate_weekday_post(data: dict) -> bool:
+    """Validates post requests to the weekday route."""
     if not isinstance(data, dict):
         return False
-    
     if len(data) != 1:
         return False
-    
     for key in data.keys():
         if key not in ["date"]:
             return False
-        
     for key in data.keys():
         try:
             convert_to_datetime(data.get(key))
         except ValueError:
             return False
-        
     return True
 
 
 def validate_birthday(date_str: str) -> bool:
+    """Validates birthday strings."""
     try:
         date_str_list = date_str.split("-")
         date_str_correct_format = ".".join([date_str_list[2], date_str_list[1], date_str_list[0]])
-        current_age = get_current_age(convert_to_datetime(date_str_correct_format).date())
+        get_current_age(convert_to_datetime(date_str_correct_format).date())
     except ValueError:
         return False
     return True
@@ -121,11 +117,9 @@ def get_history():
                     if len(app_history) > 20:
                         return app_history[:-20], 200
                     return app_history[:-number], 200
-        
-        add_to_history(request)        
+        add_to_history(request)
         if len(app_history) > 5:
             return app_history[:-5], 200
-        
         return app_history, 200
     
     if request.method == "DELETE":
